@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
-import { ExternalLink, Github, Code } from 'lucide-react';
+import { ExternalLink, Github, Code, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
+  const navigate = useNavigate();
   
   // Sample project data
   const projectsData = [
@@ -52,8 +54,8 @@ const Projects = () => {
   
   // Filter projects based on selected category
   const filteredProjects = filter === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === filter);
+    ? projectsData.slice(0, 2) // Only show 2 projects on homepage
+    : projectsData.filter(project => project.category === filter).slice(0, 2);
   
   return (
     <section id="projects" className="py-20 bg-gray-50">
@@ -101,10 +103,13 @@ const Projects = () => {
           </div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredProjects.map((project) => (
             <div key={project.id} className="bg-white rounded-lg overflow-hidden shadow-md card-hover">
-              <div className="h-48 overflow-hidden">
+              <div 
+                className="h-48 overflow-hidden cursor-pointer"
+                onClick={() => navigate(`/project/${project.id}`)}
+              >
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -114,7 +119,12 @@ const Projects = () => {
               
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                  <h3 
+                    className="text-xl font-semibold hover:text-portfolio-purple cursor-pointer"
+                    onClick={() => navigate(`/project/${project.id}`)}
+                  >
+                    {project.title}
+                  </h3>
                   <span className={`text-xs font-medium px-2 py-1 rounded-full ${
                     project.category === 'web' 
                       ? 'bg-blue-100 text-portfolio-blue' 
@@ -137,23 +147,21 @@ const Projects = () => {
                 <div className="flex gap-3">
                   <Button 
                     variant="outline" 
+                    className="flex-1 flex justify-center items-center gap-2 border-portfolio-purple text-portfolio-purple hover:bg-portfolio-purple hover:text-white"
+                    onClick={() => navigate(`/project/${project.id}`)}
+                  >
+                    <Code size={16} />
+                    View Details
+                  </Button>
+                  
+                  <Button 
+                    variant="outline" 
                     className="flex-1 flex justify-center items-center gap-2 border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
                     asChild
                   >
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <ExternalLink size={16} />
-                      Live Demo
-                    </a>
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="flex-1 flex justify-center items-center gap-2 border-portfolio-dark text-portfolio-dark hover:bg-portfolio-dark hover:text-white"
-                    asChild
-                  >
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github size={16} />
-                      Code
+                      Demo
                     </a>
                   </Button>
                 </div>
@@ -163,9 +171,12 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Button className="bg-portfolio-purple hover:bg-portfolio-purple/90 flex items-center gap-2">
-            <Code size={18} />
+          <Button 
+            className="bg-portfolio-purple hover:bg-portfolio-purple/90 flex items-center gap-2"
+            onClick={() => navigate('/projects')}
+          >
             View All Projects
+            <ArrowRight size={18} />
           </Button>
         </div>
       </div>

@@ -89,19 +89,19 @@ const Contact = () => {
           <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
             
-//          <div className="mb-4 p-4 bg-blue-50 rounded-lg">
-//               <h4 className="font-medium text-blue-700 mb-2">Google Sheet Integration</h4>
-//               <p className="text-sm text-blue-600 mb-3">
-//                 Enter the Google Apps Script Web App URL to connect this form to your Google Sheet.
-//               </p>
-//               <Input
-//                 type="url"
-//                 placeholder="Paste your Google Script Web App URL here"
-//                 value={sheetUrl}
-//                 onChange={handleSheetUrlChange}
-//                 className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
-//               />
-//             </div>
+            {/* {<div className="mb-4 p-4 bg-blue-50 rounded-lg">
+              <h4 className="font-medium text-blue-700 mb-2">Google Sheet Integration</h4>
+              <p className="text-sm text-blue-600 mb-3">
+                Enter the Google Apps Script Web App URL to connect this form to your Google Sheet.
+              </p>
+              <Input
+                type="url"
+                placeholder="Paste your Google Script Web App URL here"
+                value={sheetUrl}
+                onChange={handleSheetUrlChange}
+                className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>} */}
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

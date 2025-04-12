@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Code, Briefcase, User, MessageSquare } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/custom-button';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

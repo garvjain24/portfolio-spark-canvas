@@ -15,28 +15,63 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [sheetUrl, setSheetUrl] = useState('');
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
+  const handleSheetUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSheetUrl(e.target.value);
+  };
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    if (!sheetUrl) {
+      toast({
+        title: "Missing Google Sheet URL",
+        description: "Please enter your Google Sheet web app URL",
+        variant: "destructive",
+      });
+      setIsSubmitting(false);
+      return;
+    }
     
-    // Show success message
-    toast({
-      title: "Message sent successfully!",
-      description: "I'll get back to you as soon as possible.",
-    });
-    
-    // Reset form
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
+    try {
+      const response = await fetch(sheetUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString()
+        }),
+      });
+      
+      // Since no-cors mode doesn't return readable response
+      // We'll assume success if no error is thrown
+      toast({
+        title: "Message sent successfully!",
+        description: "Your message has been saved to Google Sheets.",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error sending message",
+        description: "There was a problem saving your message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   return (
@@ -53,6 +88,20 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="bg-gray-50 p-8 rounded-lg shadow-sm">
             <h3 className="text-xl font-semibold mb-6">Send Me a Message</h3>
+            
+            <div className="mb-4 p-4 bg-blue-50 rounded-lg">
+              <h4 className="font-medium text-blue-700 mb-2">Google Sheet Integration</h4>
+              <p className="text-sm text-blue-600 mb-3">
+                Enter the Google Apps Script Web App URL to connect this form to your Google Sheet.
+              </p>
+              <Input
+                type="url"
+                placeholder="Paste your Google Script Web App URL here"
+                value={sheetUrl}
+                onChange={handleSheetUrlChange}
+                className="border-blue-300 focus:border-blue-500 focus:ring-blue-500"
+              />
+            </div>
             
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>

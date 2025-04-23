@@ -1,11 +1,32 @@
 
 import React from 'react';
-import { Github, Instagram, Linkedin } from 'lucide-react';
+import { Github, Instagram, Linkedin, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const SocialLinks = () => {
+  const workPlatforms = [
+    {
+      name: "Upwork",
+      url: "https://www.upwork.com/",
+      bgColor: "bg-[#14a800]",
+      hoverColor: "hover:bg-[#14a800]/90"
+    },
+    {
+      name: "Fiverr",
+      url: "https://www.fiverr.com/",
+      bgColor: "bg-[#1dbf73]",
+      hoverColor: "hover:bg-[#1dbf73]/90"
+    },
+    {
+      name: "Freelancer",
+      url: "https://www.freelancer.com/",
+      bgColor: "bg-[#29b2fe]",
+      hoverColor: "hover:bg-[#29b2fe]/90"
+    }
+  ];
+
   return (
-    <>
+    <div className="space-y-8">
       <div>
         <h3 className="text-xl font-semibold mb-6">Follow Me</h3>
         
@@ -40,14 +61,25 @@ export const SocialLinks = () => {
       </div>
       
       <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg">
-        <h4 className="font-semibold mb-2">Let's Build Something Awesome Together</h4>
-        <p className="text-gray-600 mb-4">
-          I'm currently available for freelance projects and full-time opportunities.
+        <h4 className="font-semibold mb-4">Find Me On</h4>
+        <div className="grid gap-3">
+          {workPlatforms.map((platform) => (
+            <a
+              key={platform.name}
+              href={platform.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center justify-center gap-2 py-2 px-4 rounded-lg text-white transition-all ${platform.bgColor} ${platform.hoverColor}`}
+            >
+              {platform.name}
+              <ExternalLink size={16} />
+            </a>
+          ))}
+        </div>
+        <p className="text-gray-600 text-sm mt-4">
+          I'm available for freelance projects and full-time opportunities.
         </p>
-        <Button className="bg-portfolio-purple hover:bg-portfolio-purple/90 w-full">
-          Get a Quote
-        </Button>
       </div>
-    </>
+    </div>
   );
 };

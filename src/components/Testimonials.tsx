@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const Testimonials = () => {
   const testimonials = [
@@ -11,7 +12,9 @@ const Testimonials = () => {
       content: "Working with Garv was an excellent experience. He delivered our e-commerce platform ahead of schedule and exceeded our expectations in terms of quality and functionality.",
       avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       rating: 5,
-      project: "E-commerce Website"
+      project: "E-commerce Website",
+      source: "Upwork",
+      verificationBadge: "Top Rated Plus"
     },
     {
       id: 2,
@@ -20,7 +23,9 @@ const Testimonials = () => {
       content: "Garv created an outstanding mobile app for our healthcare platform. His attention to detail and understanding of user experience resulted in an app that our customers love using.",
       avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       rating: 5,
-      project: "Healthcare Mobile App"
+      project: "Healthcare Mobile App",
+      source: "Fiverr",
+      verificationBadge: "Pro Verified"
     },
     {
       id: 3,
@@ -29,7 +34,9 @@ const Testimonials = () => {
       content: "Our company website redesign was in safe hands with Garv. He transformed our outdated site into a modern, responsive platform that has significantly increased our conversion rates.",
       avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80",
       rating: 4,
-      project: "Website Redesign"
+      project: "Website Redesign",
+      source: "Freelancer",
+      verificationBadge: "Verified Client"
     },
   ];
   
@@ -56,12 +63,12 @@ const Testimonials = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map(testimonial => (
-            <div key={testimonial.id} className="bg-white rounded-lg p-6 shadow-md relative card-hover">
+            <div key={testimonial.id} className="bg-white rounded-xl p-6 shadow-lg relative card-hover">
               <div className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-md">
                 <Quote className="text-portfolio-purple" size={24} />
               </div>
               
-              <div className="flex items-center mb-6">
+              <div className="flex items-center mb-4">
                 <img 
                   src={testimonial.avatar} 
                   alt={testimonial.name} 
@@ -73,23 +80,23 @@ const Testimonials = () => {
                 </div>
               </div>
               
-              <div className="flex mb-4">
-                {renderStars(testimonial.rating)}
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex">{renderStars(testimonial.rating)}</div>
+                <Badge variant="secondary" className="text-xs">
+                  {testimonial.verificationBadge}
+                </Badge>
               </div>
               
               <p className="text-gray-600 mb-4 italic">"{testimonial.content}"</p>
               
-              <div className="text-xs text-gray-500 mt-4 pt-4 border-t">
-                Project: <span className="font-medium">{testimonial.project}</span>
+              <div className="text-xs text-gray-500 mt-4 pt-4 border-t flex justify-between items-center">
+                <span>Project: <span className="font-medium">{testimonial.project}</span></span>
+                <Badge variant="outline" className="bg-gray-50">
+                  via {testimonial.source}
+                </Badge>
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <div className="inline-flex items-center gap-1 text-portfolio-purple">
-            <span className="font-medium">More testimonials available upon request</span>
-          </div>
         </div>
       </div>
     </section>

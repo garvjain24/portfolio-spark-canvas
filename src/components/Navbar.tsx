@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Code, Briefcase, User, MessageSquare } from 'lucide-react';
+import { Menu, X, Code, Briefcase, User, MessageSquare, Book } from 'lucide-react';
 import { Button } from '@/components/ui/custom-button';
 
 const Navbar = () => {
@@ -44,7 +43,6 @@ const Navbar = () => {
             <span>Garv<span className="text-portfolio-purple">.</span>Dev</span>
           </Link>
           
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link 
               to={isHomePage ? "/#about" : "/#about"}
@@ -62,30 +60,28 @@ const Navbar = () => {
               Projects
             </Link>
             <Link 
-              to={isHomePage ? "/#services" : "/#services"} 
-              onClick={() => handleNavigation('#services')}
-              className="link-underline text-portfolio-dark hover:text-portfolio-purple"
+              to="/services"
+              className={`link-underline text-portfolio-dark hover:text-portfolio-purple ${
+                location.pathname === '/services' ? 'text-portfolio-purple' : ''
+              }`}
             >
               Services
             </Link>
             <Link 
-              to={isHomePage ? "/#testimonials" : "/#testimonials"} 
-              onClick={() => handleNavigation('#testimonials')}
-              className="link-underline text-portfolio-dark hover:text-portfolio-purple"
+              to="/blog"
+              className={`link-underline text-portfolio-dark hover:text-portfolio-purple ${
+                location.pathname === '/blog' ? 'text-portfolio-purple' : ''
+              }`}
             >
-              Testimonials
+              Blog
             </Link>
-            <Link 
-              to={isHomePage ? "/#contact" : "/#contact"}
-              onClick={() => handleNavigation('#contact')}
-            >
+            <Link to="/contact">
               <Button className="bg-portfolio-purple hover:bg-portfolio-purple/90">
                 Contact Me
               </Button>
             </Link>
           </div>
           
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button 
               onClick={() => setIsOpen(!isOpen)}
@@ -97,7 +93,6 @@ const Navbar = () => {
           </div>
         </div>
         
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg p-4 transition-all duration-300 ease-in-out">
             <div className="flex flex-col space-y-3">
@@ -120,24 +115,28 @@ const Navbar = () => {
                 Projects
               </Link>
               <Link 
-                to={isHomePage ? "/#services" : "/#services"}
-                className="py-2 px-4 hover:bg-gray-100 rounded-md flex items-center gap-2"
-                onClick={() => handleNavigation('#services')}
+                to="/services"
+                className={`py-2 px-4 hover:bg-gray-100 rounded-md flex items-center gap-2 ${
+                  location.pathname === '/services' ? 'bg-gray-100' : ''
+                }`}
+                onClick={() => setIsOpen(false)}
               >
                 <Briefcase size={18} />
                 Services
               </Link>
               <Link 
-                to={isHomePage ? "/#testimonials" : "/#testimonials"}
-                className="py-2 px-4 hover:bg-gray-100 rounded-md flex items-center gap-2"
-                onClick={() => handleNavigation('#testimonials')}
+                to="/blog"
+                className={`py-2 px-4 hover:bg-gray-100 rounded-md flex items-center gap-2 ${
+                  location.pathname === '/blog' ? 'bg-gray-100' : ''
+                }`}
+                onClick={() => setIsOpen(false)}
               >
-                <MessageSquare size={18} />
-                Testimonials
+                <Book size={18} />
+                Blog
               </Link>
               <Link 
-                to={isHomePage ? "/#contact" : "/#contact"}
-                onClick={() => handleNavigation('#contact')}
+                to="/contact"
+                onClick={() => setIsOpen(false)}
               >
                 <Button className="w-full bg-portfolio-purple hover:bg-portfolio-purple/90">
                   Contact Me

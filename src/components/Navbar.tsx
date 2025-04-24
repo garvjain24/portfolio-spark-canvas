@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-portfolio-dark flex items-center gap-2">
             <Code className="text-portfolio-purple" />
-            <span>Garv<span className="text-portfolio-purple">.</span>Dev</span>
+            <span>Garv<span className="text-portfolio-purple">.</span>Tech</span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">

@@ -14,9 +14,10 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-medium text-gray-900">Email</h4>
-            <a href="mailto:hello@garvjain.com" className="text-portfolio-blue hover:underline">
-              hello@garvjain.com
+            <a href="mailto:hello@garvjain.tech" className="text-portfolio-blue hover:underline">
+              main@garvjain.tech
             </a>
+            
           </div>
         </div>
         
@@ -26,8 +27,8 @@ export const ContactInfo = () => {
           </div>
           <div>
             <h4 className="font-medium text-gray-900">Phone</h4>
-            <a href="tel:+919876543210" className="text-portfolio-blue hover:underline">
-              +91 98765 43210
+            <a href="mailto:garvjain2410@gmail.com" className="text-portfolio-blue hover:underline">
+            garvjain2410@gmail.com
             </a>
           </div>
         </div>

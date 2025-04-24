@@ -1,0 +1,91 @@
+
+[
+  {
+    "id": 1,
+    "title": "E-commerce Platform",
+    "description": "A full-featured online store with product catalog, shopping cart, and payment gateway integration.",
+    "fullDescription": "This comprehensive e-commerce platform was built with scalability and performance in mind. It features a responsive product catalog with advanced filtering and search capabilities, a secure shopping cart system, and seamless integration with popular payment gateways. The admin dashboard provides inventory management, order processing, and customer relationship tools. The application was optimized for both desktop and mobile experiences, with particular attention to checkout flow optimization and abandoned cart recovery processes.",
+    "image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "category": "web",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe", "Redux", "Express"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "date": "January 2023",
+    "client": "RetailTech Inc.",
+    "team": ["Garv Jain (Lead Developer)", "UI/UX Designer", "Backend Developer"],
+    "challenge": "Creating a seamless shopping experience across devices while ensuring secure payment processing and efficient inventory management.",
+    "solution": "Implemented a microservices architecture with React for the frontend and Node.js for the backend. Used MongoDB for flexible product catalog management and integrated Stripe for secure payments.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    ],
+    "results": "Increased conversion rate by 25% and reduced cart abandonment by 30%. The platform now handles over 10,000 daily active users with minimal performance impact."
+  },
+  {
+    "id": 2,
+    "title": "Fitness Tracker App",
+    "description": "Mobile app that allows users to track workouts, set fitness goals, and monitor progress over time.",
+    "fullDescription": "This fitness tracking mobile application was designed to help users maintain consistent workout routines and achieve their fitness goals. The app features personalized workout plans, progress tracking with visual charts, and social features for motivation. Real-time syncing across devices ensures users always have access to their latest workout data. The app also integrates with various wearable devices to automatically import activity metrics.",
+    "image": "https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "category": "mobile",
+    "technologies": ["Flutter", "Firebase", "RESTful API", "Google Fit API", "Apple HealthKit"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "date": "March 2023",
+    "client": "FitLife Solutions",
+    "team": ["Garv Jain (Mobile Developer)", "Backend Engineer", "UI Designer"],
+    "challenge": "Creating a seamless experience across iOS and Android while managing complex health data and ensuring accuracy in workout tracking.",
+    "solution": "Built with Flutter for cross-platform compatibility and utilized Firebase for real-time data synchronization. Implemented custom algorithms for accurate calorie and exercise tracking.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    ],
+    "results": "Over 50,000 downloads within three months of launch. Users report an average of 35% better adherence to workout routines after using the app for 30 days."
+  },
+  {
+    "id": 3,
+    "title": "Restaurant Management System",
+    "description": "Comprehensive system for restaurant operations including inventory, orders, and customer management.",
+    "fullDescription": "This restaurant management system provides a complete solution for food service businesses to manage their day-to-day operations efficiently. It includes modules for inventory tracking, order management, table reservations, employee scheduling, and customer relationship management. The system features a real-time kitchen display system, integrated POS, and comprehensive reporting dashboard. Special attention was paid to creating an intuitive interface that restaurant staff could learn quickly with minimal training.",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "category": "web",
+    "technologies": ["React", "Node.js", "MongoDB", "Express", "Socket.IO", "Chart.js"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "date": "June 2023",
+    "client": "DigiDine Restaurant Group",
+    "team": ["Garv Jain (Full Stack Developer)", "UI/UX Specialist", "QA Engineer"],
+    "challenge": "Building a system that could handle high-volume peak hours while providing real-time updates between front-of-house and kitchen staff.",
+    "solution": "Implemented a real-time communication system using Socket.IO and designed a fault-tolerant architecture that caches critical data locally in case of connectivity issues.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    ],
+    "results": "Implemented in 12 restaurant locations, resulting in 20% reduction in order errors and 15% increase in table turnover rate during peak hours."
+  },
+  {
+    "id": 4,
+    "title": "Travel Companion App",
+    "description": "Mobile app for travelers to explore destinations, create itineraries, and share experiences.",
+    "fullDescription": "This travel companion application helps users discover new destinations, plan comprehensive itineraries, and share their travel experiences. It features interactive maps with points of interest, local recommendations based on user preferences, and automated itinerary creation based on available time and interests. The app works offline, syncing data when connectivity becomes available, making it perfect for international travelers. Users can also connect with fellow travelers and exchange tips and recommendations.",
+    "image": "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "category": "mobile",
+    "technologies": ["Flutter", "Google Maps API", "Firebase", "Cloud Functions", "TripAdvisor API"],
+    "liveUrl": "#",
+    "githubUrl": "#",
+    "date": "October 2023",
+    "client": "Wanderlust Tech",
+    "team": ["Garv Jain (Lead Mobile Developer)", "Backend Developer", "UX Researcher"],
+    "challenge": "Creating an app that works reliably offline while traveling, with efficient data syncing when connectivity is restored.",
+    "solution": "Implemented robust offline-first architecture using local SQLite database and intelligent sync mechanisms that prioritize essential data when bandwidth is limited.",
+    "screenshots": [
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+    ],
+    "results": "Featured in travel app collections with a 4.8/5 star rating. Users report saving an average of 4 hours of planning time per trip with the automated itinerary features."
+  }
+]

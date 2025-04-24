@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -6,64 +5,21 @@ import Footer from '@/components/Footer';
 import { ExternalLink, Github, Code } from 'lucide-react';
 import { Button } from '@/components/ui/custom-button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from '@/components/ui/custom-card';
+import { Project } from '@/types/Project'; // Import Project interface
+import projectsData from '@/data/projects.json'; // Import JSON data
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState<'all' | 'web' | 'mobile'>('all');
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     document.title = "Projects | Garv Jain Portfolio";
   }, []);
-  
-  // Sample project data
-  const projectsData = [
-    {
-      id: 1,
-      title: "E-commerce Platform",
-      description: "A full-featured online store with product catalog, shopping cart, and payment gateway integration.",
-      image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      category: "web",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Fitness Tracker App",
-      description: "Mobile app that allows users to track workouts, set fitness goals, and monitor progress over time.",
-      image: "https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      category: "mobile",
-      technologies: ["Flutter", "Firebase", "RESTful API"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Restaurant Management System",
-      description: "Comprehensive system for restaurant operations including inventory, orders, and customer management.",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      category: "web",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Travel Companion App",
-      description: "Mobile app for travelers to explore destinations, create itineraries, and share experiences.",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      category: "mobile",
-      technologies: ["Flutter", "Google Maps API", "Firebase"],
-      liveUrl: "#",
-      githubUrl: "#"
-    }
-  ];
-  
-  // Filter projects based on selected category
+
   const filteredProjects = filter === 'all' 
-    ? projectsData 
-    : projectsData.filter(project => project.category === filter);
-  
+    ? projectsData as Project[] 
+    : (projectsData as Project[]).filter(project => project.category === filter);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

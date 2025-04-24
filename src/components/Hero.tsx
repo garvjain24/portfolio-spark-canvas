@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ArrowRight, Code, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,6 +7,8 @@ const Hero = () => {
     const projectsSection = document.getElementById('projects');
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/projects';
     }
   };
 
@@ -15,6 +16,8 @@ const Hero = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      window.location.href = '/contact';
     }
   };
 

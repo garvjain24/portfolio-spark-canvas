@@ -4,21 +4,23 @@ import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const scrollToProjects = () => {
-    const projectsSection = document.getElementById('projects');
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/projects';
-    }
+    window.location.href = '/projects'
+    // const projectsSection = document.getElementById('projects');
+    // if (projectsSection) {
+    //   projectsSection.scrollIntoView({ behavior: 'smooth' });
+    // } else {
+    //   window.location.href = '/projects';
+    // }
   };
 
   const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      window.location.href = '/contact';
-    }
+    window.location.href = '/contact';
+    // const contactSection = document.getElementById('contact');
+    // if (contactSection) {
+    //   contactSection.scrollIntoView({ behavior: 'smooth' });
+    // } else {
+    //   window.location.href = '/contact';
+    // }
   };
 
   return (

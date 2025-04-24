@@ -1,26 +1,17 @@
 import React from 'react';
 import { ArrowRight, Code, ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   const scrollToProjects = () => {
-    window.location.href = '/projects'
-    // const projectsSection = document.getElementById('projects');
-    // if (projectsSection) {
-    //   projectsSection.scrollIntoView({ behavior: 'smooth' });
-    // } else {
-    //   window.location.href = '/projects';
-    // }
+    navigate('/projects');
   };
 
   const scrollToContact = () => {
-    window.location.href = '/contact';
-    // const contactSection = document.getElementById('contact');
-    // if (contactSection) {
-    //   contactSection.scrollIntoView({ behavior: 'smooth' });
-    // } else {
-    //   window.location.href = '/contact';
-    // }
+    navigate('/contact');
   };
 
   return (

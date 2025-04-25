@@ -3,6 +3,7 @@ import React from 'react';
 import { ContactForm } from './contact/ContactForm';
 import { ContactInfo } from './contact/ContactInfo';
 import { SocialLinks } from './contact/SocialLinks';
+import Testimonials from './Testimonials';
 
 const Contact = () => {
   return (
@@ -24,6 +25,8 @@ const Contact = () => {
           </div>
         </div>
       </div>
+      <div className="h-1 w-20  mx-auto rounded-full mt-12"></div>
+      <Testimonials/>
     </section>
   );
 };

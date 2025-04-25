@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4">
               <Code className="text-portfolio-purple" />
-              <span className="text-xl font-bold">Garv<span className="text-portfolio-purple">.</span>Dev</span>
+              <span className="text-xl font-bold">Garv<span className="text-portfolio-purple">.</span>Tech</span>
             </Link>
             
             <p className="text-gray-400 mb-4">
@@ -35,22 +35,22 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/#projects" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/projects" className="text-gray-400 hover:text-white transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/#services" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/#testimonials" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/testimonials" className="text-gray-400 hover:text-white transition-colors">
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/#contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
                   Contact
                 </Link>
               </li>

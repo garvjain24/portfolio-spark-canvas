@@ -1,6 +1,8 @@
 
 import React from 'react';
-import { Github, Instagram, Linkedin, ExternalLink } from 'lucide-react';
+import { Github, Instagram, Linkedin, ExternalLink, LinkedinIcon } from 'lucide-react';
+import { TbBrandFiverr } from "react-icons/tb";
+import { SiUpwork , SiFreelancer} from "react-icons/si";
 import { Button } from '@/components/ui/button';
 
 export const SocialLinks = () => {
@@ -56,6 +58,30 @@ export const SocialLinks = () => {
             className="bg-pink-100 p-3 rounded-full text-pink-700 hover:bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 hover:text-white transition-colors"
           >
             <Instagram size={24} />
+          </a>
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-green-100 p-3 rounded-full text-green-800 hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            <TbBrandFiverr size={24} />
+          </a>
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-green-100 p-3 rounded-full text-green-800 hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            <SiUpwork size={24} />
+          </a>
+          <a 
+            href="https://github.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="bg-green-100 p-3 rounded-full text-green-800 hover:bg-gray-800 hover:text-white transition-colors"
+          >
+            <SiFreelancer size={24} />
           </a>
         </div>
       </div>

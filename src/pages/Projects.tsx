@@ -102,7 +102,7 @@ const Projects = () => {
                         ? 'bg-blue-100 text-portfolio-blue' 
                         : 'bg-orange-100 text-portfolio-orange'
                     }`}>
-                      {project.category === 'web' ? 'Web App' : 'Mobile App'}
+                      {project.category}
                     </span>
                   </div>
                   

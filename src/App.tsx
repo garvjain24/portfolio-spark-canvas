@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
+import BlogDetails from "./pages/BlogDetails";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
       </Routes>
     </BrowserRouter>
   </QueryClientProvider>

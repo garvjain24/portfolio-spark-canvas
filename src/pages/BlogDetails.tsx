@@ -103,7 +103,10 @@ const BlogDetails = () => {
 
         {/* Blog Content */}
         <div className="prose prose-lg max-w-none text-gray-700">
-          <p className="text-lg leading-relaxed">{blog.content}</p>
+        <p 
+  className="text-lg leading-relaxed" 
+  dangerouslySetInnerHTML={{ __html: blog.content }}
+></p>
         </div>
 
         {/* Backlinks */}

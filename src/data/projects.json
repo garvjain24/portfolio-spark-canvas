@@ -24,10 +24,10 @@
   },
   {
     "id": 2,
-    "title": "Fitness Tracker App",
+    "title": "Fitness web",
     "description": "Mobile app that allows users to track workouts, set fitness goals, and monitor progress over time.",
     "fullDescription": "This fitness tracking mobile application was designed to help users maintain consistent workout routines and achieve their fitness goals. The app features personalized workout plans, progress tracking with visual charts, and social features for motivation. Real-time syncing across devices ensures users always have access to their latest workout data. The app also integrates with various wearable devices to automatically import activity metrics.",
-    "image": "https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "image": "https://i.postimg.cc/tCq1tKsR/fitness1.png",
     "category": "mobile",
     "technologies": ["Flutter", "Firebase", "RESTful API", "Google Fit API", "Apple HealthKit"],
     "liveUrl": "#",
@@ -38,9 +38,9 @@
     "challenge": "Creating a seamless experience across iOS and Android while managing complex health data and ensuring accuracy in workout tracking.",
     "solution": "Built with Flutter for cross-platform compatibility and utilized Firebase for real-time data synchronization. Implemented custom algorithms for accurate calorie and exercise tracking.",
     "screenshots": [
-      "https://images.unsplash.com/photo-1539794830467-1f1755804d13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      "https://i.postimg.cc/tCq1tKsR/fitness1.png",
+      "https://i.postimg.cc/y8wY5t8Z/fitness2.png",
+      "https://i.postimg.cc/hvyK03Yh/fitness3.png"
     ],
     "results": "Over 50,000 downloads within three months of launch. Users report an average of 35% better adherence to workout routines after using the app for 30 days."
   },
@@ -105,7 +105,7 @@
     "challenge": "Creating a seamless shopping experience across devices while ensuring secure payment processing and efficient inventory management.",
     "solution": "Implemented a microservices architecture with React for the frontend and Node.js for the backend. Used MongoDB for flexible product catalog management and integrated Stripe for secure payments.",
     "screenshots": [
-      "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+      "https://i.postimg.cc/tCq1tKsR/fitness1.png",
       "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
     ],
@@ -156,20 +156,20 @@
     "title": "Coffee Ordering System",
     "description": "A web application for coffee lovers to order their favorite brews online.",
     "fullDescription": "This web application allows users to browse a variety of coffee options, customize their orders, and make secure payments. The system includes a user-friendly interface for selecting coffee types, sizes, and add-ons. It also features an admin panel for managing inventory and processing orders. The application is designed to be responsive and works seamlessly on both desktop and mobile devices.",
-    "image": "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
+    "image": "https://i.postimg.cc/ZqT69W6H/coffee1.png",
     "category": "web",
     "technologies": ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-    "liveUrl": "#",
-    "githubUrl": "#",
-    "date": "February 2025",
-    "client": "Coffee Lovers Inc.",
+    "liveUrl": "https://brewbundle.netlify.app",
+    "githubUrl": "https://github.com/garvjain24/brew-bundle-scheduler",
+    "date": "April 2025",
+    "client": "College Project",
     "team": ["Garv Jain (Lead Developer)", "UI/UX Designer", "Backend Developer"],
     "challenge": "Creating a seamless online ordering experience while ensuring secure payment processing and efficient inventory management.",
     "solution": "Implemented a microservices architecture with React for the frontend and Node.js for the backend. Used MongoDB for flexible product catalog management and integrated Stripe for secure payments.",
     "screenshots": [
-      "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      "https://i.postimg.cc/ZqT69W6H/coffee1.png",
+      "https://i.postimg.cc/XqFgfTqk/coffee2.png",
+      "https://i.postimg.cc/qq88hyDm/coffee3.png"
     ],
     "results": "Increased online sales by 30% within the first month of launch. The platform now handles over 5,000 daily active users with minimal performance impact."
   }

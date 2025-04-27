@@ -18,22 +18,20 @@ export const useContactForm = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [sheetUrl, setSheetUrl] = useState('');
+  const sheetUrl  =  "https://script.google.com/macros/s/AKfycbxQG_3OVsgi_FoZ35ZNjnECtisz4mtPWYWdFrBfpwrXwM6tMdmOUDUyx-uSS0YZgaba/exec";
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSheetUrlChange = () => {
-    setSheetUrl("https://script.google.com/macros/s/AKfycbxQG_3OVsgi_FoZ35ZNjnECtisz4mtPWYWdFrBfpwrXwM6tMdmOUDUyx-uSS0YZgaba/exec");
-  };
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    if (!sheetUrl) {
+    try{if (!sheetUrl) {
       toast({
         title: "Missing Google Sheet URL",
         description: "Please enter your Google Sheet web app URL",
@@ -41,7 +39,13 @@ export const useContactForm = () => {
       });
       setIsSubmitting(false);
       return;
+    }}catch (error) {
+      console.error(error);
     }
+    finally {
+      setIsSubmitting(false); // Ensure this is called
+    }
+
     
     try {
       await fetch(sheetUrl, {
@@ -79,7 +83,6 @@ export const useContactForm = () => {
     isSubmitting,
     sheetUrl,
     handleChange,
-    handleSheetUrlChange,
     handleSubmit
   };
 };

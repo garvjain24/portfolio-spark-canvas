@@ -31,7 +31,7 @@ export const useContactForm = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    try{if (!sheetUrl) {
+   if (!sheetUrl) {
       toast({
         title: "Missing Google Sheet URL",
         description: "Please enter your Google Sheet web app URL",
@@ -39,13 +39,7 @@ export const useContactForm = () => {
       });
       setIsSubmitting(false);
       return;
-    }}catch (error) {
-      console.error(error);
     }
-    finally {
-      setIsSubmitting(false); // Ensure this is called
-    }
-
     
     try {
       await fetch(sheetUrl, {
